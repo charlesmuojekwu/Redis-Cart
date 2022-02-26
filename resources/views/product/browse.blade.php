@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md 12">
+        <div class="col-12">
             @if ($products)
                 <div class="row">
                     <div class="col-9">
@@ -13,7 +13,7 @@
                         </div>
                         @foreach ($products as $product )
                             @if($product)
-                                <div class="col-4 mb-1">
+                                <div class="col-4 mb-1" style="float:left">
                                     <div class="card">
                                         <img class="card-img-top" height="260" src="{{ $product['image'] }}" alt="Card image cap">
                                         <div class="card-body text-center">
@@ -43,5 +43,7 @@
         </div>
     </div>
 </div>
+
+
 
 @endsection

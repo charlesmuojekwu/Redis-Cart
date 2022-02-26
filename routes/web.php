@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('product.all');
 });
 
 Route::get('products/create', [ProductController::class, 'create'])->name('product.new');
