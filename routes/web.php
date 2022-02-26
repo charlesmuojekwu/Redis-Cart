@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('products/create', [ProductController::class, 'create'])->name('product.new');
 Route::post('products/create', [ProductController::class, 'store'])->name('product.store');
-Route::get('products/all', [ProductController::class, 'viewProducts'])->name('product.all');
+Route::get('products/all', [ProductController::class, 'index'])->name('product.all');
 
 
 Auth::routes();

@@ -12,14 +12,16 @@
                             <a href="{{ route('product.new') }}">Add New Product</a>
                         </div>
                         @foreach ($products as $product )
-                            <div class="col-4 float-left mb-1">
-                                <div class="card">
-                                    <img class="card-img-top" height="260" src="{{ $product['image'] }}" alt="Card image cap">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">{{ $product['name']}}</h5>
+                            @if($product)
+                                <div class="col-4 mb-1">
+                                    <div class="card">
+                                        <img class="card-img-top" height="260" src="{{ $product['image'] }}" alt="Card image cap">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title">{{ $product['name']}}</h5>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
                         @endforeach
                     </div>
                     <div class="col-3 border">
